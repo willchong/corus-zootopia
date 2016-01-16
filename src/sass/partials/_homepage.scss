@@ -1,0 +1,43 @@
+.background {
+	background: #eaeaea url('../img/zootopia-bg.jpg') center center no-repeat;
+}
+
+.main {
+	max-width: 960px;
+	margin: 0 auto;
+
+	.content {
+		text-align: center;
+
+		button {
+			@include button-style();
+			width: 256px;
+			height: 78px;
+			border: none;
+		}
+	}
+
+	.video-container {
+
+		position:relative;
+		padding-bottom:56.25%;
+		padding-top:30px;
+		height:0;
+		overflow:hidden;
+		
+		iframe, object, embed {
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+
+	}
+
+	@include breakpoint(small) {
+
+	}
+
+
+}

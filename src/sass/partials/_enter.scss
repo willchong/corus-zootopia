@@ -1,0 +1,29 @@
+.background {
+	background: #eaeaea url('../img/zootopia-bg.jpg') center center no-repeat;
+}
+
+.contest-form {
+	max-width: 960px;
+	margin: 0 auto;
+	form {
+		max-width: 740px;
+		margin: 0 auto;
+		h1 {
+			color: $white;
+		}
+		input[type="submit"] {
+			@include button-style;
+			width: 420px;
+			height: 84px;
+			border: none;
+		}
+	}
+	.release-date {
+		text-align: center;
+	}
+		
+	}
+
+	@include breakpoint(small) {
+
+	}

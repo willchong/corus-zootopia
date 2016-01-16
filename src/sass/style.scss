@@ -1,0 +1,25 @@
+@import "libs/normalize",
+        "libs/bootstrap",
+        "partials/constants",
+        "partials/fonts",
+        "partials/header",
+        "partials/footer",
+        "partials/homepage",
+        "partials/enter";
+
+
+body {
+    padding: 0px;
+}
+
+h1 {
+    color: $black;
+}
+
+h2 {
+    color: $yellow;
+}
+
+h3 {
+    color: $yellow;
+}

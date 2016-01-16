@@ -1,0 +1,72 @@
+header {
+	background: #cf8e3c;
+	background: -moz-linear-gradient(top,  #cf8e3c 0%, #f9b64e 100%);
+	background: -webkit-linear-gradient(top,  #cf8e3c 0%,#f9b64e 100%);
+	background: linear-gradient(to bottom,  #cf8e3c 0%,#f9b64e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf8e3c', endColorstr='#f9b64e',GradientType=0 );
+
+	min-height: 88px;
+
+	.container {
+		max-width: 960px;
+
+		.button-container {
+			text-align: center;
+			button {
+				width: 170px;
+				height: 50px;
+				position: relative;
+				margin-top: 15px;
+				@include button-style();
+			}
+		}
+
+	}
+
+	@include breakpoint(medium) {
+
+		.container {
+			.top-logo {
+				.amope {
+					margin-left: 0px;
+				}
+			}
+		}
+		
+	}
+
+	@include breakpoint(small) {
+		min-height: auto;
+
+		.container {
+
+			.top-logo {
+				text-align: center;
+				margin-left: -150px;
+
+				.amope {
+					display: inline-block;
+					margin-top: 20px;
+					margin-left: 20px;
+					margin-right: 20px;
+					margin-bottom: 20px;
+					width: 160px;
+				}
+				.pedi-perfect {
+					display: inline-block;
+					margin-top: 20px;
+					margin-right: 20px;
+					width: 75px;
+				}
+				.product {
+					position: absolute;
+					margin-top: -10px;
+					width: 150px;
+				}
+			}
+
+		}
+	}
+
+}
+

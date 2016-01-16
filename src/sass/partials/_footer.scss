@@ -1,0 +1,21 @@
+footer {
+
+	.container {
+		max-width: 960px;
+		.links {
+			color: #aaa;
+			a {
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+				color: #aaa;
+			}
+			.right {
+				text-align: right;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+
+	}
+}
