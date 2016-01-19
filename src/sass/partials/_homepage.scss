@@ -3,37 +3,115 @@
 }
 
 .main {
-	max-width: 960px;
+	max-width: 992px;
 	margin: 0 auto;
+	padding: 0;
+
+	.video {
+		z-index: 101;
+		position: relative;
+		margin: 380px auto 0;
+		width: 992px;
+		height: 635px;
+		background: url('../img/video-frame.png') top center no-repeat;
+		background-size: 100% 100%;
+
+		.video-container {
+			-webkit-box-shadow: inset 0px 0px 75px 2px rgba(0,0,0,0.75);
+			-moz-box-shadow: inset 0px 0px 75px 2px rgba(0,0,0,0.75);
+			box-shadow: inset 0px 0px 75px 2px rgba(0,0,0,0.75);
+			width: 78%;
+			height: 72%;
+			margin: 9.5% auto 0;
+			float: none;
+			padding: 0;
+			position:relative;
+			// padding-bottom:56.25%;
+			// height:0;
+			// overflow:hidden;
+			
+			iframe, object, embed {
+				// position:absolute;
+				// top:0;
+				// left:0;
+				// width:100%;
+				// height:100%;
+			}
+
+		}
+
+	}
+
+	.video-footer {
+		z-index: 100;
+
+		.video-footer-container {
+			width: 703px;
+			height: 123px;
+			margin: 0 auto;
+			top: -28px;
+			background: url('../img/video-footer.png') no-repeat;
+			text-align: center;
+			display: table;
+			position:relative;
+			float:none;
+			
+			p {
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 34px;
+				font-family: "dbrooksamlight", Arial, sans-serif;
+				color: $white;
+				text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+			}
+
+		}
+
+	}
 
 	.content {
-		text-align: center;
+		margin: 0 auto;
 
-		button {
-			@include button-style();
-			width: 256px;
-			height: 78px;
-			border: none;
+		.copy {
+			// max-width: 926px;
+			margin: 0 auto;
+			text-align:center;
+			background: url("../img/white-glow.png") no-repeat;
+			background-size: 100% 100%;
+
+			h1 {
+				font-size: 114px;
+				text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+			}
+			img {
+				margin: 0 auto 30px;
+				display: block;
+				max-width: 100%;
+			}
+			p {
+				font-size: 24px;
+				margin-bottom: 24px;
+				max-width: 780px;
+				display: inline-block;
+				text-align: left;
+			}
+			a {
+				display: inline-block;
+				font-size: 58px;
+				width: 256px;
+				height: 78px;
+
+				button {
+					@include button-style();
+					width: 256px;
+					height: 78px;
+					border: none;
+				}
+			}
 		}
-	}
-
-	.video-container {
-
-		position:relative;
-		padding-bottom:56.25%;
-		padding-top:30px;
-		height:0;
-		overflow:hidden;
-		
-		iframe, object, embed {
-			position:absolute;
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-		}
 
 	}
+	
 
 	@include breakpoint(small) {
 

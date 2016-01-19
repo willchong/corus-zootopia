@@ -1,11 +1,16 @@
 
-
 .contest-form {
 	max-width: 960px;
+	min-height: 1274px;
 	margin: 0 auto;
+	margin-top: 510px;
+	background: url("../img/form-bg.png") no-repeat;
+	background-size: 100% 100%;
+	
 	form {
-		max-width: 740px;
+		max-width: 670px;
 		margin: 0 auto;
+		
 		h1 {
 			color: $white;
 		}
@@ -14,13 +19,25 @@
 			width: 420px;
 			height: 84px;
 			border: none;
+			font-size: 58px;
+		}
+		h2 {
+			text-transform: uppercase;
 		}
 	}
-	.release-date {
-		text-align: center;
-	}
+
 		
+}
+.release-date {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 180px;
+	h3 {
+		font-size: 45px;
+		margin: 0;
+		text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 	}
+}
 
 	@include breakpoint(small) {
 
