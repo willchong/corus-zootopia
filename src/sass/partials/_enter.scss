@@ -10,19 +10,77 @@
 	form {
 		max-width: 670px;
 		margin: 0 auto;
-		
+		color: $white;
+		font-size: 16px;
+		font-family: Arial, sans-serif;
+
 		h1 {
 			color: $white;
+			font-size: 78px;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 60px;
+			margin-bottom: 20px;
 		}
-		input[type="submit"] {
-			@include button-style;
-			width: 420px;
-			height: 84px;
-			border: none;
-			font-size: 58px;
+		input {
+			color: $black;
+			margin-bottom: 20px;
+			box-shadow: inset 0px 0px 0px 0px white;
+			border: 0;
+		}
+		.captcha {
+			margin-top: 24px;
+			text-align: center;
+		}
+		.submit {
+			text-align: center;
+
+			input[type="submit"] {
+				@include button-style;
+				width: 420px;
+				height: 84px;
+				margin-top: 24px;
+				font-size: 58px;
+				border-radius: 10px;
+			}
+
+		}
+		
+		input[type="checkbox"] {
+			-ms-transform: scale(2); /* IE */
+			-moz-transform: scale(2); /* FF */
+			-webkit-transform: scale(2); /* Safari and Chrome */
+			-o-transform: scale(2); /* Opera */
+			padding: 10px;
+			margin:10px;
+		}
+		input[type="text"], input[type="email"] {
+			height: 36px;
+			width: 100%;
+		}
+		.phone-input {
+			padding-right: 6px;
 		}
 		h2 {
 			text-transform: uppercase;
+			text-align: center;
+			font-size: 38px;
+			margin: 30px 0;
+			&.left {
+    			text-align: left;
+			}
+		}
+		label {
+			top: 6px;
+			position: relative;
+			&.no-margin {
+				top: 0;
+				vertical-align: middle;
+			}
+			a {
+				color: $white;
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -33,6 +91,7 @@
 	margin-top: 50px;
 	margin-bottom: 180px;
 	h3 {
+		font-family: Arial, sans-serif;
 		font-size: 45px;
 		margin: 0;
 		text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);

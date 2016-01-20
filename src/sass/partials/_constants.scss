@@ -5,6 +5,9 @@ $black: #000;
 $white: #fff;
 
  @mixin breakpoint($point) {
+  @if $point == xsmall {
+     @media (max-width: 640px)  { @content ; }
+  }
   @if $point == small {
      @media (max-width: 768px)  { @content ; }
   }

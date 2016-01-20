@@ -1,5 +1,14 @@
 .background {
 	background: #000 url('../img/zootopia-bg.jpg') top center no-repeat;
+	@include breakpoint(medium) {
+		background-size: 1520px;
+	}
+	@include breakpoint(small) {
+		background-size: 1300px;
+	}
+	@include breakpoint(xsmall) {
+		background-size: 1000px;
+	}
 }
 
 .main {
@@ -11,10 +20,17 @@
 		z-index: 101;
 		position: relative;
 		margin: 380px auto 0;
-		width: 992px;
+		max-width: 992px;
 		height: 635px;
 		background: url('../img/video-frame.png') top center no-repeat;
 		background-size: 100% 100%;
+
+		@include breakpoint(small) {
+			margin: 320px auto 0;
+		}
+		@include breakpoint(xsmall) {
+			margin: 230px auto 0;
+		}
 
 		.video-container {
 			-webkit-box-shadow: inset 0px 0px 75px 2px rgba(0,0,0,0.75);
@@ -44,13 +60,14 @@
 
 	.video-footer {
 		z-index: 100;
-
+		max-width: 100%;
 		.video-footer-container {
 			width: 703px;
 			height: 123px;
 			margin: 0 auto;
 			top: -28px;
 			background: url('../img/video-footer.png') no-repeat;
+			background-size: 100% 100%;
 			text-align: center;
 			display: table;
 			position:relative;
@@ -63,6 +80,16 @@
 				font-family: "dbrooksamlight", Arial, sans-serif;
 				color: $white;
 				text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+
+				
+				@include breakpoint(medium) {
+					font-size: 30px;
+				}
+
+				@include breakpoint(small) {
+					font-size: 26px;
+				}
+
 			}
 
 		}
@@ -75,13 +102,22 @@
 		.copy {
 			// max-width: 926px;
 			margin: 0 auto;
+			margin-bottom: 300px;
 			text-align:center;
 			background: url("../img/white-glow.png") no-repeat;
 			background-size: 100% 100%;
 
 			h1 {
-				font-size: 114px;
+				font-size: 98px;
+				text-transform: uppercase;
 				text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+				@include breakpoint(medium) {
+					font-size: 74px;
+				}
+				@include breakpoint(small) {
+					font-size: 68px;
+				}
+
 			}
 			img {
 				margin: 0 auto 30px;
@@ -94,6 +130,12 @@
 				max-width: 780px;
 				display: inline-block;
 				text-align: left;
+				@include breakpoint(medium) {
+					padding: 0 32px;
+				}
+				@include breakpoint(small) {
+					font-size: 16px;
+				}
 			}
 			a {
 				display: inline-block;

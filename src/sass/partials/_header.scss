@@ -32,5 +32,17 @@ header {
 		
 	}
 
+	@include breakpoint(xsmall) {
+
+		.container {
+			.button-container {
+				button {
+					width: 100px;
+				}
+			}
+		}
+
+	}
+
 }
 
