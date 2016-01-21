@@ -15,6 +15,15 @@ footer {
 			}
 			.right {
 				text-align: right;
+				@include breakpoint(small){
+					text-align: center;
+				}
+			}
+			.left {
+				text-align: left;
+				@include breakpoint(small){
+					text-align: center;
+				}
 			}
 		}
 	}

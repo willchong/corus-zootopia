@@ -76,18 +76,18 @@
 			p {
 				display: table-cell;
 				vertical-align: middle;
-				font-size: 34px;
+				font-size: 52px;
 				font-family: "dbrooksamlight", Arial, sans-serif;
 				color: $white;
 				text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 
 				
 				@include breakpoint(medium) {
-					font-size: 30px;
+					font-size: 40px;
 				}
 
 				@include breakpoint(small) {
-					font-size: 26px;
+					font-size: 36px;
 				}
 
 			}
