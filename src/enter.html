@@ -9,129 +9,133 @@
 <body>
     <!-- @@include templates/header.html -->
 
-	<div class="background">
-		<div class="container">
-			<div class="contest-form">
-				<div id="zootopia">
-					<div class="row">
-						<div class="col-sm-12">
-							<h1>ZOO &amp; YOUR FRIENDS SCREENING CONTEST</h1>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<h2>You Can Ask Your Parents to Enter This Contest</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<p>Only entrants who have reached the age of majority are allowed to enter the contest.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<input type="checkbox" name="age"></input>
-							<label for="age" class="no-margin">I have reached the age of majority.</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<h2>Parents - Please Fill out the form below</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="firstname">First Name:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="text" name="firstname"></input>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="lastname1">Last Name:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="text" name="lastname1"></input>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="phone1">Phone Number:</label>
-						</div>
-						<div class="col-sm-6">
-							<div class="row">
-								<div class="col-xs-3 phone-input">
-									<input type="text" name="phone1"></input>
-								</div>
-								<div class="col-xs-3 phone-input">
-									<input type="text" name="phone2"></input>
-								</div>
-								<div class="col-xs-6">
-									<input type="text" name="phone3"></input>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="email">Email Address:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="email" name="email"></input>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="province">Province/Territory:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="text" name="province"></input>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<h2 class="left">Your child’s information (optional)</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="childname">Your Child's First Name:</label>
-						</div>
-						<div class="col-sm-6">
-							<input type="text" name="childname"></input>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<h2 class="left">rules &amp; regulations</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<input type="checkbox" name="rules"></input>
-							<label for="age" class="no-margin">I have read the <a href="rules.html">rules and regulations</a>.</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 captcha">
-							<p>CAPTCHA</p>
-							<p>Click on the box, then choose the correct images</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 submit">
-							<input type="submit" value="Click Here to Enter!"></input>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 release-date">
-					<h3>Zootopia is in theatres March 4, 2016</h3>
-				</div>
-			</div>
-		</div>
+<div class="background">
+        <div class="container">
+            <div class="contest-form">
+                <div id="zootopia">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>ZOO &amp; YOUR FRIENDS SCREENING CONTEST</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2>You Can Ask Your Parents to Enter This Contest</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>Only entrants who have reached the age of majority are allowed to enter the contest.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="checkbox" name="underAOM" id="underAOM" />
+                            <label for="age" class="no-margin">I have reached the age of majority.</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2>Parents - Please Fill out the form below</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="firstname">First Name:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="firstname" name="firstname" value="<%= Request["firstname"] %>"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="lastname1">Last Name:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="lastname" name="lastname" value="<%= Request["lastname"] %>"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="phone1">Phone Number:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-xs-3 phone-input">
+                                    <input type="text" id="phone1" name="phone1" size="3" maxlength="3" value="<%= Phone1 %>"/>
+                                </div>
+                                <div class="col-xs-3 phone-input">
+                                    <input type="text" id="phone2" name="phone2" size="3" maxlength="3" value="<%= Phone2 %>"/>
+                                </div>
+                                <div class="col-xs-6">
+                                    <input type="text" id="phone3" name="phone3" size="3" maxlength="3" value="<%= Phone3 %>"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="email">Email Address:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="email" name="email" value="<%= Request["email"] %>"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="province">Province/Territory:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <pn:ProvinceDropDown ID="province" runat="server" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="left">Your child’s information (optional)</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="childname">Your Child's First Name:</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" name="childname" id="childname" value="<%= Request["childname"] %>"></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 class="left">rules &amp; regulations</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="rules-error-list"><ul></ul></div>
+                            <input type="checkbox" name="rules"></input>
+                            <label for="age" class="no-margin">I have read the <a href="rules.pdf" target="_blank">rules and regulations</a>.</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 captcha">
+                            <p>CAPTCHA</p>
+                            <p>Click on the box, then choose the correct images</p>
+                            <div id="captcha-error-list"><ul><%= ErrorMessage %></ul></div>                         
+	                        <div class="g-recaptcha" data-sitekey="6LdbgvwSAAAAADkM-Fxa-vaCa92Itge1LQWkjjHP"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 submit">
+                            <a href="#" id="entry-button">Enter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 release-date">
+                    <h3>Zootopia is in theatres March 4, 2016</h3>
+                </div>
+            </div>
+        </div>
+    
     <!-- @@include templates/footer.html -->
 	</div>
 
